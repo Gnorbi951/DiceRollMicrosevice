@@ -23,4 +23,11 @@ public class DiceRollServiceTest {
         assertTrue(value > 0);
         assertTrue(value < 7);
     }
+
+    @RepeatedTest(50)
+    public void rollD20() {
+        int value = service.rollD20();
+        assertTrue(value > 0);
+        assertTrue(value < 21);
+    }
 }

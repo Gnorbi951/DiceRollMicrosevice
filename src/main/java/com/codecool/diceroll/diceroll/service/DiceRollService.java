@@ -17,4 +17,9 @@ public class DiceRollService {
         log.info("Roll D6");
         return random.nextInt(6)+1;
     }
+
+    public int rollD20() {
+        log.info("Roll D20");
+        return random.nextInt(20)+1;
+    }
 }
