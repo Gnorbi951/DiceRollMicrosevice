@@ -21,7 +21,7 @@ public class DiceRollController {
     @Autowired
     private Environment env;
 
-    @GetMapping("D6")
+    @GetMapping("/d6")
     public Roll rollD6() {
         return new Roll(
             service.rollD6(),
@@ -29,6 +29,16 @@ public class DiceRollController {
                 env.getProperty("server.port")
         );
     }
+
+    @GetMapping("/d20")
+    public Roll rollD20() {
+        return new Roll(
+            service.rollD20(),
+                "D20",
+                env.getProperty("server.port")
+        );
+    }
+
 
     @Data
     @AllArgsConstructor
